@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informations sur le patient</title>
+    <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="text-center text-bg-info">Informations sur le patient</h1>
+            <div class="card border-info">
+            <table class="table border-info mt-1">
+                <tbody>
+                <tr>
+                    <th>ID</th>
+                    <td th:text="${patient.getId()}"></td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td th:text="${patient.getNom()}"></td>
+                </tr>
+                <tr>
+                    <th>Date de naissance</th>
+                    <td th:text="${patient.getDateNaissance()}"></td>
+                </tr>
+
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

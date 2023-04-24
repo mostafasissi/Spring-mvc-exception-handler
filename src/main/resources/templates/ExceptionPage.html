@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Details</title>
+    <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center text-bg-danger p-1">Oooopps !!!!</h2>
+    <h3 class="text-info text-center">Error Details</h3>
+    <div class="row">
+        <div class="col-md-10 offset-2 border-2 border-danger">
+            <p><strong>Message:</strong> <span class="text-bg-danger" th:text="${detailException.getMessage()}"></span></p>
+            <p><strong>Status:</strong> <span class="text-bg-info" th:text="${detailException.getHttpStatus()}"></span> (<span
+                    th:text="${detailException.getHttpStatus().getReasonPhrase()}"></span>)</p>
+            <p><strong>Date:</strong> <span th:text="${detailException.getZonedDateTime()}"></span></p>
+            <p><strong>Throwable:</strong></p>
+            <pre th:text="${detailException.getThrowable()}"></pre>
+        </div>
+    </div>
+</div>
+</body>
+</html>
